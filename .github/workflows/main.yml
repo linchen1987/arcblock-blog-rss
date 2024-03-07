@@ -2,7 +2,7 @@ name: Schedule
 
 on:
   schedule:
-    - cron: '10 * * * *'
+    - cron: '17 * * * *'
 
 jobs:
   main:
@@ -35,4 +35,4 @@ jobs:
           AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: 'node tools/test.js'
+        run: 'node tools/fetch-arcblock-blog.js'

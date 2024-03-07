@@ -1,7 +1,7 @@
-import fs from "node:fs";
-import path from "node:path";
-import "dotenv-flow/config";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+import fs from 'node:fs';
+import path from 'node:path';
+import 'dotenv-flow/config';
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 
 export default async function upload(file) {
   // A region and credentials can be declared explicitly. For example
@@ -21,7 +21,8 @@ export default async function upload(file) {
       Bucket: bucketName,
       Key: path.basename(file),
       Body: fileStream,
-      ACL: "public-read",
+      ACL: 'public-read',
+      ContentType: 'application/xml',
     })
   );
 }

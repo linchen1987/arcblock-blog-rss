@@ -2,10 +2,10 @@ name: Schedule
 
 on:
   schedule:
-    - cron: "*/3 * * * *"
+    - cron: '*/10 * * * *'
 
 jobs:
-  lint:
+  main:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,8 +20,8 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
-          cache: "pnpm"
+          node-version: '18'
+          cache: 'pnpm'
 
       - name: Setup
         run: npm add -g @antfu/ni
@@ -30,4 +30,4 @@ jobs:
         run: nci
 
       - name: Run
-        run: "node tools/test.js"
+        run: 'node tools/test.js'

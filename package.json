@@ -1,22 +1,20 @@
 {
   "name": "arcblock-blog-rss",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.ts",
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.11.25",
+    "@aws-sdk/client-s3": "^3.525.0",
     "axios": "^1.6.7",
-    "express": "^4.18.3",
-    "express-async-errors": "^3.1.1",
-    "multer": "1.4.5-lts.1"
+    "dotenv-flow": "^4.1.0",
+    "rss": "^1.2.2"
   }
 }

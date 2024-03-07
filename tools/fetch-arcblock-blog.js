@@ -11,7 +11,7 @@ const thirdPartyApiUrl = 'https://www.arcblock.io/blog/api/blogs?page=1&size=20'
   try {
     console.log('Fetching blogs from arcblock.io...');
     const response = await axios.get(thirdPartyApiUrl);
-    const blogs = (response.data.data || []).slice(5);
+    const blogs = response.data.data || [];
 
     // 创建新的RSS feed
     var feed = new RSS({

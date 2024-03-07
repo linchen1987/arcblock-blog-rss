@@ -27,6 +27,7 @@ const thirdPartyApiUrl = 'https://www.arcblock.io/blog/api/blogs?page=1&size=20'
       feed.item({
         title: blog.title,
         description: blog.excerpt,
+        guid: blog.id,
         url: `https://www.arcblock.io/blog/${blog.slug}`,
         date: blog.publishTime,
       });
